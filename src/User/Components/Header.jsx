@@ -21,7 +21,7 @@ function Header() {
      </div>
 
      {/* login */}
-     <div className='flex items-center justiy-end hidden'>
+     <div className='md:flex items-center justify-end hidden'>
       <FaInstagram/>
       <FaXTwitter/>
       <FaFacebookSquare/>
