@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../../components/Footer'
-import { FaBackward, FaEye } from 'react-icons/fa'
+import { FaBackward, FaCamera, FaEye } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 function View() {
+  const[modal,setModal]=useState(false)
   return (
   <>
   <Header />
@@ -18,7 +19,7 @@ function View() {
         <div className='col-span-3'>
           <div className='flex justify-between'>
             <h3 className='font-bold text-2xl'>Ttile</h3>
-            <button className='text-gray-500'><FaEye/></button>
+            <button onClick={()=>setModal(true)} className='text-gray-500'><FaEye/></button>
           </div>
           <h2 className='font-bold text-blue-500'>Author</h2>
           <div className='md:grid grid-cols-3 gap-10 my-10'>
@@ -42,7 +43,8 @@ function View() {
     </div>
 
     {/* modal */}
-    <div className=' relative z-10 overflow-y-auto'>
+   { modal&& 
+    <div onClick={()=>setModal(false)} className=' relative z-10 overflow-y-auto'>
   <div className='bg-gray-500/75 fixed inset-0'>
   <div className='flex justify-center items-center min-h-screen'>
     <div className='bg-white rounded w-100 md:w-250 '>
@@ -51,11 +53,19 @@ function View() {
         <h2>Book Images</h2>
       </div>
       {/* modal body */}
-      
+      <div className=' relative p-5'>
+        <p className='flex items-center text-blue-500'><FaCamera className='me-3'/>camera clicks of the books</p>
+        <div className='flex flex-wrap my-5'> 
+          {/* duplicate image */}
+          <img className='md:w-75 w-25 md:me-2 mb:3 md:mt-0' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4HeJT-9o_GvAuODzmOH_BQaUMnH2-cORI25SHHLYGDQ&s=10" alt="view book" />
+        
+        
+        </div>
+      </div>
     </div>
     </div>
     </div>
-    </div>
+    </div>}
   </div>
   <Footer />
   </>
