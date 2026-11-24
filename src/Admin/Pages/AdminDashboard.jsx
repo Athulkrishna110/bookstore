@@ -1,10 +1,22 @@
 import React from 'react'
+import Footer from '../../components/Footer'
+import AdminHeader from '../Components/AdminHeader'
+import AdminSidebar from '../Components/AdminSidebar'
 
 function AdminDashboard() {
   return (
-    <div>
-      AdminDashboard
-    </div>
+  <>
+     <AdminHeader/>
+      <div className='md:grid grid-cols-5'>
+        {/* 1st section 1 grid */}
+        <div className='col-span'>
+          <AdminSidebar/>
+        </div>
+        {/* 2nd section 4 grid */}
+        <div className='col-span-4'>Admin Collections</div>
+      </div>
+      <Footer/>
+  </>
   )
 }
 
