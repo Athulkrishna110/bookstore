@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Header from '../components/Header'
+import Header from '../Components/Header'
 import Footer from '../../components/Footer'
 import { FaCircle } from 'react-icons/fa'
 import { FaCircleCheck } from 'react-icons/fa6'
@@ -9,7 +9,7 @@ import UploadStatus from '../Components/UploadStatus'
 import PurchaseHistory from '../Components/PurchaseHistory'
 
 function Profile() {
-  const[currentTab,setCurrentTab]=useState()
+  const[currentTab,setCurrentTab]=useState(1)
   return (
     <>
     <Header />

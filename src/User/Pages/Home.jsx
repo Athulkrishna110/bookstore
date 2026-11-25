@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header'
+import Header from '../Components/Header'
 import Footer from '../../components/Footer'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -51,7 +51,7 @@ function Home() {
      
 
       <div className='p-5'>
-        <img src="https://images.squarespace-cdn.com/content/v1/64bfd6aa127fba0754a78d65/1690617601186-7MS4W32UWBXKFKZTCQ14/authorphotos5-1024x683.jpg" alt="Author" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSmiTto46zwIekyGxuUOhDkTycm0aLLMItTtQfLA-Zcg&s=10" alt="Author" />
       </div>
        </section>
 
